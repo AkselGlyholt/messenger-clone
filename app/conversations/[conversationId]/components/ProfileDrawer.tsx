@@ -39,7 +39,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     if (otherUser) {
       return format(new Date(otherUser.createdAt), "PP");
     }
-  }, [otherUser?.createdAt]);
+  }, [otherUser?.createdAt, otherUser]);
 
   const title = useMemo(() => {
     return data.name || otherUser?.name;
